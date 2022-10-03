@@ -1,0 +1,98 @@
+html {
+	background: rgb(28, 39, 95);
+	background: linear-gradient(0deg, rgba(28, 39, 95, 1.0) 0%, 
+		rgba(255, 255, 255, 1.0) 100%);
+	font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+header{
+	background-image: url("starry.jpg");
+	overflow: hidden;
+	position: fixed;
+	width: 99%;
+	height: 50px;
+	z-index: 2;
+	display: flex;
+	padding: 0px;
+}
+
+header a{
+	flex: auto;
+	text-align: center;
+	padding: 10px 0;
+	color: #e3cdb3;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+header a:hover{
+	color: #afb9c5;
+}
+
+.greeting {
+	align-content: center;
+	width: auto;
+	height: 750px;
+}
+
+.center {
+	text-align: center;
+	color: black;
+	font-size: 50px;
+	font-weight: thick;
+	position: absolute;
+	top:  50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center{
+	
+}
+
+.about{
+	height: 60px;
+}
+
+.intro{
+	height: 400px;
+	color: rgb(227,205,179);
+	font-size: 25px;
+}
+
+
+.intro a.photo{
+	display: inline-block;
+	position: relative;
+	margin-right: 15px;
+	float:  left;
+	height: 85%;
+	width: 20%;
+	overflow: hidden;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.intro_depth{
+	height: 400px;
+	color: rgb(227,205,179);
+	font-size: 20px;
+	margin: 25px;
+
+}
+
+.resume {
+	height: 75px;
+}
+
+.resume_info{
+	height: 400px;
+}
+
+.work {
+	height: 75px;
+}
+
+.projects {
+	height: 400px;
+}
