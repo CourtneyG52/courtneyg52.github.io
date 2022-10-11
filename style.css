@@ -1,12 +1,13 @@
 html {
-	background: rgb(28, 39, 95);
-	background: linear-gradient(0deg, rgba(28, 39, 95, 1.0) 0%, 
-		rgba(255, 255, 255, 1.0) 100%);
+	background: rgb(133,161,215);
+	background: linear-gradient(0deg, rgba(133,161,215,1) 0%, 
+		rgba(6,45,103,1) 100%);
 	font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 
 header{
 	background-image: url("starry.jpg");
+	background: transparent;
 	overflow: hidden;
 	position: fixed;
 	width: 99%;
@@ -20,7 +21,7 @@ header a{
 	flex: auto;
 	text-align: center;
 	padding: 10px 0;
-	color: #e3cdb3;
+	color: #FFE13A;
 	text-decoration: none;
 	font-size: 17px;
 }
@@ -30,14 +31,12 @@ header a:hover{
 }
 
 .greeting {
-	align-content: center;
-	width: auto;
-	height: 750px;
+	height: 800px;
 }
 
 .center {
 	text-align: center;
-	color: black;
+	color: #FFE13A;
 	font-size: 50px;
 	font-weight: thick;
 	position: absolute;
@@ -56,7 +55,7 @@ header a:hover{
 
 .intro{
 	height: 400px;
-	color: rgb(227,205,179);
+	color: #FFE13A;
 	font-size: 25px;
 }
 
@@ -74,25 +73,77 @@ header a:hover{
 }
 
 .intro_depth{
-	height: 400px;
-	color: rgb(227,205,179);
-	font-size: 20px;
+	height: auto;
+	color: #F0C722;
+	font-size: 30px;
 	margin: 25px;
 
 }
 
-.resume {
-	height: 75px;
-}
+.intro_depth a.fun_facts{
+	font-size: 20px;
+	align-content: center;
+	height: auto;
 
-.resume_info{
-	height: 400px;
 }
 
 .work {
-	height: 75px;
+	height: auto;
+	text-align: center;
+	color: #FFE13A;
+	font-size: 50px;
+	font-weight: thick;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
 }
 
 .projects {
-	height: 400px;
+	height: auto;
+	color: #F0C722;
+	font-size: 25px;
+	padding: 25px 25px;
+}
+
+.projects .project-list{
+	position: relative;
+	margin: 10px 10px;
+}
+
+.projects .project-language{
+	position: relative;
+	padding: 10px 0;
+	font-size: 30px;
+	color: #F0C722;
+	cursor: pointer;
+}
+
+.projects .project-language::before{
+	content: "+";
+	color: #F0C722;
+	position: absolute;
+	top: 50%;
+	right: -5px;
+	font-size: 30px;
+	transform: translateY(-50%);
+}
+
+.projects .lang-list{
+	position: relative;
+	height: 0;
+	font-size: 20px;
+	text-align: justify;
+	width: 780px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.projects .project-list.active .lang-list{
+	height: 150px;
+}
+
+.projects .project-list.active .project-language::before{
+	content: "-";
+	font-size: 30px;
 }
