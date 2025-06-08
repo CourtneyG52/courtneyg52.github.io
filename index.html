@@ -11,9 +11,9 @@
 
 	<div id = "sideBar" class = "sidenav">
 		<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
-		<a href="src/work.html" target = "" rel="noopener noreferrer">Work</a>
-		<a href="src/about.html" target = "" rel="noopener noreferrer">About Me</a>
-		<a href="src/docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+		<a href="work.html" target = "" rel="noopener noreferrer">Work</a>
+		<a href="about.html" target = "" rel="noopener noreferrer">About Me</a>
+		<a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 		<label class = "switch">
 			<input type = "checkbox" id = "toggleSwitch">
 			<span class = "slider round"></span>
@@ -24,10 +24,10 @@
 
 			function switchTheme(theme) {
 				if (theme ==="style") {
-					toggleStyle.setAttribute("href","src/style.css");
+					toggleStyle.setAttribute("href","style.css");
 					toggleBar.checked = true;
 				} else {
-					toggleStyle.setAttribute("href","src/night.css");
+					toggleStyle.setAttribute("href","night.css");
 					toggleBar.checked = false;
 				}
 				localStorage.setItem("theme",theme);
@@ -51,7 +51,7 @@
 
 <div id = "main">
 	<div class = "center">Welcome</div>
-	<a class = "photo"><img class = "me" src = "src/docs/professional.jpg"></a>
+	<a class = "photo"><img class = "me" src = "docs/professional.jpg"></a>
 		<div class = "intro_text">Hello! My name is Courtney Holmberg, and thank you for visting my website. <br>
 		Feel free to take a look around. <br>
 		</div>
