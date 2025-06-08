@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Courtney Holmberg</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" id = "layout" type="text/css" href="night.css">
+	</head>
+
+	<div id = "sideBar" class = "sidenav">
+		<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+		<a href="work.html" target = "" rel="noopener noreferrer">Work</a>
+		<a href="about.html" target = "" rel="noopener noreferrer">About Me</a>
+		<a href="content/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+		<label class = "switch">
+			<input type = "checkbox" id = "toggleSwitch">
+			<span class = "slider round"></span>
+		</label>
+		<script>
+			const toggleBar = document.getElementById('toggleSwitch');
+			const toggleStyle = document.getElementById('layout');
+
+			function switchTheme(theme) {
+				if (theme ==="style") {
+					toggleStyle.setAttribute("href","style.css");
+					toggleBar.checked = true;
+				} else {
+					toggleStyle.setAttribute("href","night.css");
+					toggleBar.checked = false;
+				}
+				localStorage.setItem("theme",theme);
+			}
+
+			const savedToggle = localStorage.getItem("theme") || "night";
+			switchTheme(savedToggle);
+
+			toggleBar.addEventListener("change", () => {
+				const theme = toggleBar.checked ? "style" : "night";
+				switchTheme(theme);
+			});
+		</script>
+	</div>
+
+	<div class = "menuIcon" onclick="openNav()">
+		<div class = "bar1"></div>
+		<div class = "bar2"></div>
+		<div class = "bar3"></div>
+	</div>
+
+<div id = "main">
+	<div class = "center">Welcome</div>
+	<a class = "photo"><img class = "me" src = "content/professional.jpg"></a>
+		<div class = "intro_text">Hello! My name is Courtney Holmberg, and thank you for visting my website. <br>
+		Feel free to take a look around. <br>
+		</div>
+		</div>
+
+	</div>
+
+	<script> 
+		function openNav() {
+			document.getElementById("sideBar").style.width = "200px";
+		}
+
+		function closeNav() {
+			document.getElementById("sideBar").style.width = "0";
+		}
+	</script>
+
+</html>
