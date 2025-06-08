@@ -1,0 +1,244 @@
+html {
+	background: rgb(4, 25, 46);
+	font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+.sidenav {
+	height:100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: rgb(17, 77, 138);
+	background: linear-gradient(0deg, rgba(17, 77, 138,1) 0%, 
+		rgba(4, 25, 46) 100%);
+	overflow: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+.sidenav a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #D3D3D3;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover{
+	color: A0C4FF;
+}
+
+.sidenav .closeButton{
+	position: absolute;
+	top: 0px;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #D3D3D3;
+	margin: 6px 0;
+	transtion: 0.4s;
+}
+
+.center {
+	height: 100%;
+	text-align: center;
+	color: #D3D3D3;
+	font-size: 50px;
+	font-weight: thick;
+	position: relative;
+	top:  10%;
+	vertical-align: center;
+}
+
+.about{
+	height: 60px;
+}
+
+.intro{
+	color: #D3D3D3;
+	font-size: 25px;
+	position: relative;
+}
+
+.me {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a.photo img{
+	display: flex;
+	align-content: center;
+	position: relative;
+	float:  center;
+	height: 360px;
+	width: 270px;
+	overflow: hidden;
+	object-fit: contain;
+	border-radius: 100%;
+	z-index: 5;
+}
+
+.intro_text{
+	color: #D3D3D3;
+	text-align: center;
+	font-size: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.intro_depth{
+	height: auto;
+	color: #D3D3D3;
+	font-size: 30px;
+	margin: 25px;
+
+}
+
+.intro_depth a.fun_facts{
+	font-size: 20px;
+	align-content: center;
+	height: auto;
+
+}
+
+.work {
+	height: auto;
+	text-align: center;
+	color: #D3D3D3;
+	font-size: 50px;
+	font-weight: thick;
+	position: absolute;
+	padding: 50px;
+	margin-bottom: 50px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.p1, .p2, .p3, .p4, .p5 {
+	color: white;
+}
+
+.projects {
+	height: 50px;
+	color: #D3D3D3;
+	font-size: 25px;
+	padding: 25px 25px;
+	margin: 25px;
+}
+
+.project-list{
+	position: relative;
+	margin: 10px 10px;
+}
+
+.collapsible {
+  background-color: transparent;
+  color: #D3D3D3;
+  cursor: pointer;
+  margin-top: 25px;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 40px;
+  position: relative;
+  border-color:transparent;
+}
+
+.collapsible:after{
+	content: '+';
+    background-color: transparent;
+    color: #D3D3D3;
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 35px;
+    position: relative;
+    border-color:transparent;
+}
+
+.active:after{
+	content: "-";
+	color: #D3D3D3;
+}
+
+.content {
+	margin-left: 25px;
+    display: none;
+    overflow: hidden;
+    background-color: transparent;
+    height: auto;
+    color: #D3D3D3;
+    font-size: 25px;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 34px;
+	background: rgb(224, 185, 27);
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background: #D3D3D3;
+	transition: .4s;
+	border-radius: 50%;
+}
+
+
+input:checked + .slider {
+	background-color: rgba(6,45,103,1);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px rgba(133,161,215);
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px);
+	color: #F0C722;
+}
+
