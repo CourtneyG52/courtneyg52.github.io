@@ -6,13 +6,13 @@
 		<title>Courtney Holmberg</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" id = "layout" type="text/css" href="night.css">
+		<link rel="stylesheet" id = "layout" type="text/css" href="src/night.css">
 	</head>
 
 	<div id = "sideBar" class = "sidenav">
 		<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
-		<a href="work.html" target = "" rel="noopener noreferrer">Work</a>
-		<a href="about.html" target = "" rel="noopener noreferrer">About Me</a>
+		<a href="src/work.html" target = "" rel="noopener noreferrer">Work</a>
+		<a href="src/about.html" target = "" rel="noopener noreferrer">About Me</a>
 		<a href="docs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 		<label class = "switch">
 			<input type = "checkbox" id = "toggleSwitch">
@@ -24,10 +24,10 @@
 
 			function switchTheme(theme) {
 				if (theme ==="style") {
-					toggleStyle.setAttribute("href","style.css");
+					toggleStyle.setAttribute("href","src/style.css");
 					toggleBar.checked = true;
 				} else {
-					toggleStyle.setAttribute("href","night.css");
+					toggleStyle.setAttribute("href","src/night.css");
 					toggleBar.checked = false;
 				}
 				localStorage.setItem("theme",theme);
