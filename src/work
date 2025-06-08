@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Work</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" id = "layout" type="text/css" href="night.css">
+	</head>
+
+		<div id = "sideBar" class = "sidenav">
+		<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+		<a href="website.html" target = "" rel="noopener noreferrer">Home Page</a>
+		<a href="about.html" target = "" rel="noopener noreferrer">About Me</a>
+		<a href="content/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+		<label class = "switch">
+			<input type = "checkbox" id = "toggleSwitch">
+			<span class = "slider round"></span>
+		</label>
+		<script>
+			const toggleBar = document.getElementById('toggleSwitch');
+			const toggleStyle = document.getElementById('layout');
+
+			function switchTheme(theme) {
+				if (theme ==="style") {
+					toggleStyle.setAttribute("href","style.css");
+					toggleBar.checked = true;
+				} else {
+					toggleStyle.setAttribute("href","night.css");
+					toggleBar.checked = false;
+				}
+				localStorage.setItem("theme",theme);
+			}
+
+			const savedToggle = localStorage.getItem("theme") || "night";
+			switchTheme(savedToggle);
+
+			toggleBar.addEventListener("change", () => {
+				const theme = toggleBar.checked ? "style" : "night";
+				switchTheme(theme);
+			});
+		</script>
+	</div>
+
+	<div class = "menuIcon" onclick="openNav()">
+		<div class = "bar1"></div>
+		<div class = "bar2"></div>
+		<div class = "bar3"></div>
+	</div>
+
+	<div class = "center">My Work</div>
+	<div id = "main">
+	<button type="button" class="collapsible">Python</button>
+<div class="content">
+  <a href="content/Invasion.zip" download class = "p1">Alien Invasion</a>
+  <br> <br>
+  <a href="content/Mario.zip" download class = "p2">Mario</a>
+</div>
+
+<button type="button" class="collapsible">Android Studio</button>
+<div class="content">
+  <a href="content/TicTacToe.zip" download class="p3">Tic-Tac-Toe</a>
+  <br> <br>
+  <a href="content/Calculator.zip" download class="p4">Calculator</a>
+  <br> <br>
+  <a href="content/Timer.zip" download class="p5">Timer</a>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+	</div>
+
+	<script> 
+		function openNav() {
+			document.getElementById("sideBar").style.width = "200px";
+			document.getElementById("main").style.marginLeft = "200px";
+		}
+
+		function closeNav() {
+			document.getElementById("sideBar").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+		}
+	</script>
+
+</html>
