@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>About Me</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" id = "layout" type="text/css" href="night.css">
+	</head>
+
+		<div id = "sideBar" class = "sidenav">
+		<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+		<a href="website.html" target = "" rel="noopener noreferrer">Home Page</a>
+		<a href="work.html" target = "" rel="noopener noreferrer">Work</a>
+		<a href="content/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+		<label class = "switch">
+			<input type = "checkbox" id = "toggleSwitch">
+			<span class = "slider round"></span>
+		</label>
+		<script>
+			const toggleBar = document.getElementById('toggleSwitch');
+			const toggleStyle = document.getElementById('layout');
+
+			function switchTheme(theme) {
+				if (theme ==="style") {
+					toggleStyle.setAttribute("href","style.css");
+					toggleBar.checked = true;
+				} else {
+					toggleStyle.setAttribute("href","night.css");
+					toggleBar.checked = false;
+				}
+				localStorage.setItem("theme",theme);
+			}
+
+			const savedToggle = localStorage.getItem("theme") || "night";
+			switchTheme(savedToggle);
+
+			toggleBar.addEventListener("change", () => {
+				const theme = toggleBar.checked ? "style" : "night";
+				switchTheme(theme);
+			});
+		</script>
+	</div>
+
+	<div class = "menuIcon" onclick="openNav()">
+		<div class = "bar1"></div>
+		<div class = "bar2"></div>
+		<div class = "bar3"></div>
+	</div>
+
+	<script> 
+		function openNav() {
+			document.getElementById("sideBar").style.width = "200px";
+		}
+
+		function closeNav() {
+			document.getElementById("sideBar").style.width = "0";
+		}
+	</script>
+
+			<a class = "photo"><img class = "me" src = "content/professional.jpg"></a>
+			<div class = "intro">
+			<h1>Developer<br>
+				Web Designer<br>
+				Analyst<br>
+				Explorer
+				</h1>
+		</div>
+
+		<div class = "intro_depth">
+			<p>Hello, my name is Courtney Holmberg. I am an ambitious 29 year old who likes to keep busy. Whether it be by spending my free time coding, traveling, or learning a new skill. I am driven, always pushing myself to try new things outside my comfort zone. As well as continuosly pushing myself to create new applications to expand my knowledge in computer science.</p>
+
+			<a class = "fun_facts">
+
+				<p>FUN FACTS ABOUT ME: <br>
+				1. I have a two Bachelors Degrees (Business and Computer Science) and am currently working on my Masters in Computer Science.<br>
+				2. When I was 19 I traveled to Kenya to volunteer at an Orphanage. <br>
+				3. I went on a 3 month cross-country road trip, visiting all 48 contential states.<br>
+				4. Every year I run the Turkey Trot and the Shamrock Run in Buffalo, NY. </p>
+
+				<p>THINGS I LIKE TO DO IN MY FREE TIME:<br>
+					1. Learning new coding techniques. <br>
+					2. Hiking, and exploring new trails. <br>
+					3. Visiting new places with my husband. <br>
+					4. Cross-Stitching my long-term Pokemon project. <br>
+				</p>
+			</a>
+		</div>
+
+</html>
